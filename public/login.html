@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sign in | Hospital Management System</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="login-page">
+  <div id="message" role="status" hidden></div>
+
+  <form id="login-form" class="login-card" novalidate>
+    <h1>Hospital Management System</h1>
+    <label>I am a
+      <select id="role" required>
+        <option value="">Select your role</option>
+        <option value="patient">Patient</option>
+        <option value="doctor">Doctor</option>
+        <option value="staff">Staff</option>
+        <option value="admin">Admin</option>
+      </select>
+    </label>
+    <label>Username <input id="username" autocomplete="username" required></label>
+    <label>Password <input id="password" type="password" autocomplete="current-password" required></label>
+    <button type="submit">Sign in</button>
+    <p class="form-prompt">New patient? <button id="show-register" class="link" type="button">Create an account</button></p>
+  </form>
+
+  <form id="register-form" class="login-card" novalidate hidden>
+    <h1>Create patient account</h1>
+    <label>Full name <input id="register-name" autocomplete="name" required></label>
+    <label>Username <input id="register-username" autocomplete="username" minlength="3" maxlength="30" required></label>
+    <label>Password <input id="register-password" type="password" autocomplete="new-password" minlength="8" required></label>
+    <label>Age <input id="register-age" type="number" min="0" max="120" step="1" required></label>
+    <label>Gender
+      <select id="register-gender" required>
+        <option value="">Select your gender</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="other">Other</option>
+      </select>
+    </label>
+    <label>Contact number <input id="register-contact" type="tel" autocomplete="tel" required></label>
+    <label>Address <input id="register-address" autocomplete="street-address"></label>
+    <button type="submit">Create account</button>
+    <p class="form-prompt"><button id="show-login" class="link" type="button">Back to sign in</button></p>
+  </form>
+
+  <script src="js/ui.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/login.js"></script>
+</body>
+</html>

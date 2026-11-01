@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hospital Management System</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="shell">
+    <aside>
+      <div class="brand">Hospital Management System</div>
+      <nav id="nav"></nav>
+      <div class="userbox">
+        <span id="whoami"></span>
+        <button id="logout" class="secondary small" type="button">Sign out</button>
+      </div>
+    </aside>
+    <main>
+      <div id="message" role="status" hidden></div>
+      <h1 id="page-title"></h1>
+      <div id="view"></div>
+    </main>
+  </div>
+
+  <!-- Load order matters: helpers, then feature modules, then app.js -->
+  <script src="js/ui.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/modules/dashboard.js"></script>
+  <script src="js/modules/patients.js"></script>
+  <script src="js/modules/doctors.js"></script>
+  <script src="js/modules/appointments.js"></script>
+  <script src="js/modules/billing.js"></script>
+  <script src="js/modules/reports.js"></script>
+  <script src="js/modules/admin.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
